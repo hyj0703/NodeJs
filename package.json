@@ -1,0 +1,72 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --ext .js ./src",
+    "pm2": "pm2 start pm2.config.json",
+    "dev": "node ./internals/scripts/dev.js",
+    "dev:auto": "node ./internals/scripts/dev.auto.js",
+    "clear": "node ./internals/scripts/clear.js",
+    "fat": "webpack --config ./internals/webpack/webpack.fat.conf.js",
+    "uat": "webpack --config ./internals/webpack/webpack.uat.conf.js",
+    "pro": "webpack --config ./internals/webpack/webpack.pro.conf.js",
+    "build": "webpack --config ./internals/webpack/webpack.prod.conf.js",
+    "start": "webpack --progress --config ./internals/webpack/webpack.dev.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyj0703/NodeJs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hyj0703/NodeJs/issues"
+  },
+  "homepage": "https://github.com/hyj0703/NodeJs#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "date-fns": "^2.25.0",
+    "fs-extra": "^10.0.0",
+    "indexeddbshim": "^8.0.0",
+    "jsdom": "^18.0.1",
+    "multer": "^1.4.3",
+    "mysql2": "^2.3.3-rc.0",
+    "nacos": "^2.2.0",
+    "node-corejs": "^0.0.23",
+    "nodejieba": "^2.5.2",
+    "qr-image": "^3.2.0",
+    "sequelize": "^6.9.0",
+    "source-map-support": "^0.5.20",
+    "superagent": "^6.1.0",
+    "uuid": "^8.3.2",
+    "rimraf": "^3.0.2",
+    "nodemon": "^2.0.14",
+    "webpack": "^5.14.0",
+    "webpack-node-externals": "^3.0.0",
+    "friendly-errors-webpack-plugin": "^2.0.0-beta.2",
+    "node-notifier": "^10.0.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "clean-webpack-plugin": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.3",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb": "^19.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.0",
+    "pre-commit": "^1.2.2",
+    "webpack-cli": "^4.3.1"
+  },
+  "pre-commit": [
+    "lint"
+  ]
+}

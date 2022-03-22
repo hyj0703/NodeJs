@@ -1,0 +1,51 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "es6": true,
+    "commonjs": true,
+    "node": true
+  },
+  // 在 .eslintrc.js 中需要指定react版本号：
+  "settings": {
+    "react": {
+      /**
+       * "detect" automatically picks the version you have installed.
+       * You can also use `16.0`, `16.3`, etc, if you want to override the detected value.
+       * default to latest and warns if missing
+       */
+
+      "version": "999.999.999" // It will default to "detect" in the future
+
+      // "version": "detect"
+      // "version": "16.12.0"
+    },
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  },
+  "extends": ["airbnb", "eslint:recommended"],
+  "rules": {
+    "indent": ["error", 2], // 换行缩进
+    "no-console": "off", // 禁用 console
+    "max-classes-per-file": ["error", 10], // 强制每个文件中包含的的类的最大数量
+    "no-underscore-dangle": "off", // 禁止标识符中有悬空下划线
+    "array-callback-return": "off", // 强制数组方法的回调函数中有 return 语句
+    "consistent-return": "off", // 要求 return 语句要么总是指定返回的值，要么不指定
+    "no-param-reassign": "off", // 给函数参数属性赋值
+    "no-unused-expressions": "off", // 应为赋值或函数调用，而不是表达式
+    "no-shadow": "off", // 重复声明
+    "import/no-unresolved": "off", // 无法解析路径
+    "class-methods-use-this": "off", // 类方法应使用“this”
+    "camelcase": "off", // 驼峰大小写
+    "no-return-assign": "off", // 无返回值
+    "import/no-named-default": "off", // 使用默认导入语法导入
+    "no-template-curly-in-string": "off", // 意外的模板字符串表达式
+    "no-unused-vars": "off", // 声明未使用
+    "comma-dangle": "off", // 缺少尾随逗号
+    "no-restricted-syntax": "off", // for..in循环在整个原型链上迭代
+    "guard-for-in": "off", // for-in的主体应该封装在if语句中，以从原型中过滤不需要的属性
+    "prefer-destructuring": "off" // 使用数组解构
+  }
+}
